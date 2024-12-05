@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://brn4dvy6x4ker"]
+
+[ext_resource type="Texture2D" uid="uid://dpfetw2fsoodn" path="res://assets/scene/colored_castle.png" id="1_no024"]
+[ext_resource type="Script" path="res://scenes/level/level.gd" id="1_v7pmg"]
+[ext_resource type="PackedScene" uid="uid://c8ifgmstfe1xv" path="res://scenes/watah/watah.tscn" id="2_gm27i"]
+
+[node name="level" type="Node2D"]
+script = ExtResource("1_v7pmg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(581, 332)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("1_no024")
+
+[node name="animalStart" type="Marker2D" parent="."]
+position = Vector2(173, 246)
+
+[node name="watah" parent="." instance=ExtResource("2_gm27i")]
+z_index = 1
+position = Vector2(7, 318)
