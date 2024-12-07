@@ -45,7 +45,7 @@ stream = ExtResource("5_gvv0n")
 
 [node name="kick" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_dqrj2")
-volume_db = -5.0
+volume_db = -7.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="input_event" from="." to="." method="_on_input_event"]

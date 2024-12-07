@@ -3,7 +3,7 @@ extends RigidBody2D
 enum ANIMAL_STATE {READY, DRAG, RELEASE}
 
 const DRAG_LIMIT_MAX: Vector2 = Vector2(0, 100)
-const DRAG_LIMIT_MIN: Vector2 = Vector2(-100, 0)
+const DRAG_LIMIT_MIN: Vector2 = Vector2(-100, -40)
 const IMPULSE_MULTIPLIER: float = 20.0
 const IMPULSE_MAX: float = 1200.0
 
@@ -110,6 +110,7 @@ func _on_sleeping_state_changed() -> void:
 		if cb.size() > 0:
 			cb[0].die()
 		call_deferred("animal_die")
+		SignalManager.on_animal_died.emit()
 
 func play_collision() -> void:
 	if _last_collision_count == 0 and get_contact_count() > 0 and kick.playing == false:

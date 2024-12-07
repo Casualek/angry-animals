@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://brn4dvy6x4ker"]
+[gd_scene load_steps=4 format=3 uid="uid://brn4dvy6x4ker"]
 
 [ext_resource type="Texture2D" uid="uid://dpfetw2fsoodn" path="res://assets/scene/colored_castle.png" id="1_no024"]
 [ext_resource type="Script" path="res://scenes/level/level.gd" id="1_v7pmg"]
 [ext_resource type="PackedScene" uid="uid://c8ifgmstfe1xv" path="res://scenes/watah/watah.tscn" id="2_gm27i"]
-[ext_resource type="PackedScene" uid="uid://db6kvhy01ipeb" path="res://scenes/cup/cup.tscn" id="4_g8a8x"]
 
 [node name="level" type="Node2D"]
 script = ExtResource("1_v7pmg")
@@ -19,6 +18,3 @@ position = Vector2(173, 246)
 [node name="watah" parent="." instance=ExtResource("2_gm27i")]
 z_index = 1
 position = Vector2(7, 318)
-
-[node name="cup" parent="." instance=ExtResource("4_g8a8x")]
-position = Vector2(373, 491)
