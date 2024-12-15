@@ -9,7 +9,7 @@
 position = Vector2(495, 440)
 
 [node name="cup2" parent="." index="4" instance=ExtResource("2_re2oj")]
-position = Vector2(743, 350)
+position = Vector2(760, 439)
 
 [node name="cup3" parent="." index="5" instance=ExtResource("2_re2oj")]
-position = Vector2(970, 216)
+position = Vector2(631, 439)

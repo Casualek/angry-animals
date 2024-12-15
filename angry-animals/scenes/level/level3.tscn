@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://ca3y88weqkptl"]
+[gd_scene load_steps=4 format=3 uid="uid://ca3y88weqkptl"]
 
 [ext_resource type="PackedScene" uid="uid://brn4dvy6x4ker" path="res://scenes/level/level.tscn" id="1_lie1s"]
 [ext_resource type="PackedScene" uid="uid://db6kvhy01ipeb" path="res://scenes/cup/cup.tscn" id="2_qlvcl"]
+[ext_resource type="PackedScene" uid="uid://cg3oh34usdld2" path="res://scenes/barier/barier.tscn" id="3_1a3ie"]
 
 [node name="level" instance=ExtResource("1_lie1s")]
 
@@ -19,3 +20,17 @@ position = Vector2(663, 223)
 
 [node name="cup5" parent="." index="7" instance=ExtResource("2_qlvcl")]
 position = Vector2(635, 370)
+
+[node name="barier" parent="." index="10" instance=ExtResource("3_1a3ie")]
+position = Vector2(1087, 125)
+
+[node name="barier4" parent="." index="11" instance=ExtResource("3_1a3ie")]
+position = Vector2(493, 378)
+
+[node name="barier2" parent="." index="12" instance=ExtResource("3_1a3ie")]
+position = Vector2(936, 328)
+rotation = 1.5708
+
+[node name="barier3" parent="." index="13" instance=ExtResource("3_1a3ie")]
+position = Vector2(550, 62)
+rotation = 1.5708

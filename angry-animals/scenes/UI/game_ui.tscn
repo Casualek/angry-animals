@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=3 uid="uid://rxk6uw0vfait"]
+
+[ext_resource type="Script" path="res://scenes/UI/game_ui.gd" id="1_gng3x"]
+[ext_resource type="LabelSettings" uid="uid://d2l6ivai1q0mh" path="res://assets/fonts/lvl_label.tres" id="1_nmpih"]
+[ext_resource type="LabelSettings" uid="uid://v46p1ywnwlea" path="res://assets/fonts/lvl_complete.tres" id="2_vj2co"]
+[ext_resource type="LabelSettings" uid="uid://di0rl5krs1x64" path="res://assets/fonts/press_space.tres" id="3_l2307"]
+[ext_resource type="AudioStream" uid="uid://y38rsccqoxtl" path="res://assets/audio/jazzyfrenchy.mp3" id="5_h2ob4"]
+
+[node name="gameUi" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_gng3x")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VB1" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="lvlLabel" type="Label" parent="MarginContainer/VB1"]
+layout_mode = 2
+text = "LEVEL: 1"
+label_settings = ExtResource("1_nmpih")
+
+[node name="attemptsLabel" type="Label" parent="MarginContainer/VB1"]
+layout_mode = 2
+text = "Attempts: 1"
+label_settings = ExtResource("1_nmpih")
+
+[node name="VB2" type="VBoxContainer" parent="MarginContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="MarginContainer/VB2"]
+layout_mode = 2
+text = "LEVEL COMPLETE"
+label_settings = ExtResource("2_vj2co")
+
+[node name="Label2" type="Label" parent="MarginContainer/VB2"]
+layout_mode = 2
+text = "Press Space"
+label_settings = ExtResource("3_l2307")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="gameSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_h2ob4")

@@ -14,9 +14,12 @@ var _level_scene: PackedScene
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	level_num.text = str(level_number)
+	var _best = Scorer.get_best(str(level_number))
+	score.text = str(_best)
 	_level_scene = load("res://scenes/level/level%s.tscn" % level_number)
 
 func _on_pressed() -> void:
+	Scorer.set_lvl_selected(level_number)
 	get_tree().change_scene_to_packed(_level_scene)
 
 func _on_mouse_entered() -> void:
